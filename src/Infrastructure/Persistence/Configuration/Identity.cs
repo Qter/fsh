@@ -26,7 +26,7 @@ public class ApplicationRoleConfig : IEntityTypeConfiguration<ApplicationRole>
         builder
             .ToTable("Roles", SchemaNames.Identity)
             .IsMultiTenant()
-                .AdjustUniqueIndexes();
+            .AdjustUniqueIndexes();
 }
 
 public class ApplicationRoleClaimConfig : IEntityTypeConfiguration<ApplicationRoleClaim>
