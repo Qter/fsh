@@ -1,4 +1,5 @@
-﻿using Finbuckle.MultiTenant.EntityFrameworkCore;
+﻿using System.Linq;
+using Finbuckle.MultiTenant.EntityFrameworkCore;
 using Backend.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -22,11 +23,26 @@ public class ApplicationUserConfig : IEntityTypeConfiguration<ApplicationUser>
 
 public class ApplicationRoleConfig : IEntityTypeConfiguration<ApplicationRole>
 {
-    public void Configure(EntityTypeBuilder<ApplicationRole> builder) =>
+    public void Configure(EntityTypeBuilder<ApplicationRole> builder)
+    {
         builder
             .ToTable("Roles", SchemaNames.Identity)
-            .IsMultiTenant()
-            .AdjustUniqueIndexes();
+            .IsMultiTenant();
+
+        var normalizedNameIndex = builder.Metadata.GetIndexes()
+            .FirstOrDefault(index => index.IsUnique
+                && index.Properties.Any(property => property.Name == nameof(IdentityRole.NormalizedName)));
+
+        if (normalizedNameIndex is not null)
+        {
+            builder.Metadata.RemoveIndex(normalizedNameIndex);
+        }
+
+        builder
+            .HasIndex("NormalizedName", "TenantId")
+            .HasDatabaseName("RoleNameIndex")
+            .IsUnique();
+    }
 }
 
 public class ApplicationRoleClaimConfig : IEntityTypeConfiguration<ApplicationRoleClaim>
