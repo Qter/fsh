@@ -8,18 +8,18 @@
 
 ## What's fullstackhero's .NET Web API Boilerplate?
 
-fullstackhero's .NET Web API Boilerplate is a starting point for your next `.NET 7 Clean Architecture Project` that incorporates the most essential packages and features your projects will ever need including out of the box Multi-Tenancy support. This project can save well over `200+ hours` of development time for your team.
+fullstackhero's .NET Web API Boilerplate is a starting point for your next `.NET 9 Clean Architecture Project` that incorporates the most essential packages and features your projects will ever need including out of the box Multi-Tenancy support. This project can save well over `200+ hours` of development time for your team.
 
 > As the name suggests, this is an API / Server Boilerplate. You can find other Client Boilerplates that consume this API under `@fullstackhero` handle.
 > - Find `Blazor WebAssembly Boilerplate` here - https://github.com/fullstackhero/blazor-wasm-boilerplate
 
 ## Goals
 
-The goal of this repository is to provide a complete and feature-rich starting point for any .NET Developer / Team to kick-start their next major project using .NET 7 Web API. This also serves the purpose of learning advanced concepts and implementations such as `Multitenancy, CQRS, Onion Architecture, Clean Coding standards, Cloud Deployments with Terraform to AWS, Docker Concepts, CICD Pipelines & Workflows` and so on.
+The goal of this repository is to provide a complete and feature-rich starting point for any .NET Developer / Team to kick-start their next major project using .NET 9 Web API. This also serves the purpose of learning advanced concepts and implementations such as `Multitenancy, CQRS, Onion Architecture, Clean Coding standards, Cloud Deployments with Terraform to AWS, Docker Concepts, CICD Pipelines & Workflows` and so on.
 
 ## Features
 
-- [x] Built on .NET 7.0
+- [x] Built on .NET 9.0
 - [x] Follows Clean Architecture Principles
 - [x] Domain Driven Design
 - [x] Cloud Ready. Can be deployed to AWS Infrastructure as ECS Containers using Terraform!
@@ -76,7 +76,7 @@ To get started with this Boilerplate, here are the available options.
 
 Before creating your first fullstackhero solution, you should ensure that your local machine has:
 
-- **.NET 7** You can find the download [here](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
+- **.NET 9** You can find the download [here](https://dotnet.microsoft.com/en-us/download/dotnet/9.0).
 - **NodeJS (16+)** You can find the download [here](https://nodejs.org/en/download).
 
 #### Installation
@@ -107,7 +107,7 @@ OR
 fsh api n FSH.Starter
 ```
 
-This will create a new .NET 7 WEBAPI solution for you using the FSH Templates.
+This will create a new .NET 9 WEBAPI solution for you using the FSH Templates.
 For further steps and details, [Read the Getting Started Guide](https://fullstackhero.net/dotnet-webapi-boilerplate/general/getting-started/)
 
 #### Update
