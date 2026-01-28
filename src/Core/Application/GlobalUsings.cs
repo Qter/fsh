@@ -1,0 +1,17 @@
+global using Ardalis.Specification;
+global using FluentValidation;
+global using Backend.Application.Common.Events;
+global using Backend.Application.Common.Exceptions;
+global using Backend.Application.Common.FileStorage;
+global using Backend.Application.Common.Interfaces;
+global using Backend.Application.Common.Models;
+global using Backend.Application.Common.Persistence;
+global using Backend.Application.Common.Specification;
+global using Backend.Application.Common.Validation;
+global using Backend.Domain.Catalog;
+global using Backend.Domain.Common;
+global using Backend.Domain.Common.Contracts;
+global using Backend.Shared.Notifications;
+global using MediatR;
+global using Microsoft.Extensions.Localization;
+global using Microsoft.Extensions.Logging;
